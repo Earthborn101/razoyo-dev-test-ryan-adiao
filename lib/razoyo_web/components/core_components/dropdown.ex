@@ -149,7 +149,7 @@ defmodule RazoyoWeb.CoreComponents.Dropdown do
 
   defp trigger_button_classes(_label, _trigger_element), do: "align-middle"
 
-  defp dropdown_menu_item_classes(),
+  defp dropdown_menu_item_classes,
     do:
       "block flex items-center self-start dark:hover:bg-gray-700 dark:text-gray-300 justify-start px-4 py-2 text-sm text-gray-700 transition duration-150 dark:bg-gray-800 ease-in-out w-full text-left"
 

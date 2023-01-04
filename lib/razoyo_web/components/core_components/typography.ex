@@ -141,7 +141,7 @@ defmodule RazoyoWeb.CoreComponents.Typography do
     """
   end
 
-  defp text_base_class(), do: "leading-5 text-gray-600 dark:text-gray-400"
+  defp text_base_class, do: "leading-5 text-gray-600 dark:text-gray-400"
 
   def prose(assigns) do
     assigns =

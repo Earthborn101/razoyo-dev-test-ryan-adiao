@@ -15,6 +15,8 @@ defmodule RazoyoWeb.CoreComponents.Input do
 
   import RazoyoWeb.CoreComponents.Helpers
 
+  alias Phoenix.HTML.Form
+
   attr :id, :any
   attr :name, :any
   attr :label, :string, default: nil
@@ -39,11 +41,11 @@ defmodule RazoyoWeb.CoreComponents.Input do
     assigns
     |> assign(field: nil)
     |> assign_new(:name, fn ->
-      name = Phoenix.HTML.Form.input_name(f, field)
+      name = Form.input_name(f, field)
       if assigns.multiple, do: name <> "[]", else: name
     end)
-    |> assign_new(:id, fn -> Phoenix.HTML.Form.input_id(f, field) end)
-    |> assign_new(:value, fn -> Phoenix.HTML.Form.input_value(f, field) end)
+    |> assign_new(:id, fn -> Form.input_id(f, field) end)
+    |> assign_new(:value, fn -> Form.input_value(f, field) end)
     |> assign_new(:errors, fn -> translate_errors(f.errors || [], field) end)
     |> input()
   end
@@ -80,7 +82,7 @@ defmodule RazoyoWeb.CoreComponents.Input do
         {@rest}
       >
         <option :if={@prompt}><%= @prompt %></option>
-        <%= Phoenix.HTML.Form.options_for_select(@options, @value) %>
+        <%= Form.options_for_select(@options, @value) %>
       </select>
       <CC.error :for={msg <- @errors}><%= msg %></CC.error>
     </div>

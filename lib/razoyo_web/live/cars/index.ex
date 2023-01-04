@@ -5,7 +5,7 @@ defmodule RazoyoWeb.CarsLive.Index do
 
   alias Razoyo.API.Cars
 
-  def mount(params, _, socket) do
+  def mount(_params, _, socket) do
     {:ok, socket}
   end
 
@@ -21,7 +21,7 @@ defmodule RazoyoWeb.CarsLive.Index do
     |> assign_cars()
   end
 
-  defp live_action(%{assigns: %{token: token}} = socket, %{"id" => id} = params, :show) do
+  defp live_action(%{assigns: %{token: token}} = socket, %{"id" => id}, :show) do
     socket
     |> assign(:car_info, Cars.get_car(id, token))
   end
@@ -39,9 +39,8 @@ defmodule RazoyoWeb.CarsLive.Index do
      |> push_patch(to: set_url("/cars", assigns))}
   end
 
-  defp set_url(url, %{filter: %{make: make}}) do
-    "#{url}?make=#{make}"
-  end
+  defp set_url(url, %{filter: %{make: make}}),
+    do: "#{url}?make=#{make}"
 
   defp set_url(url, _), do: url
 
@@ -57,13 +56,11 @@ defmodule RazoyoWeb.CarsLive.Index do
     end
   end
 
-  defp assign_cars(%{assigns: %{filter: filter}} = socket) do
-    assign_cars(socket, filter)
-  end
+  defp assign_cars(%{assigns: %{filter: filter}} = socket),
+    do: assign_cars(socket, filter)
 
-  defp assign_cars(socket) do
-    assign_cars(socket, %{})
-  end
+  defp assign_cars(socket),
+    do: assign_cars(socket, %{})
 
   defp assign_cars(socket, filter) do
     return = Cars.list_cars(filter)

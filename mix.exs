@@ -48,7 +48,8 @@ defmodule Razoyo.MixProject do
       {:plug_cowboy, "~> 2.5"},
       {:httpoison, "~> 1.8"},
       {:poison, "~> 5.0"},
-      {:number, "~> 1.0"}
+      {:number, "~> 1.0"},
+      {:credo, "~> 1.6", only: [:dev, :test], runtime: false}
     ]
   end
 

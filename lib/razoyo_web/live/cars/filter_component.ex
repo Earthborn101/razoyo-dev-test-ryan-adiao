@@ -45,29 +45,23 @@ defmodule RazoyoWeb.CarsLive.FilterComponent do
     """
   end
 
-  defp add_any_option(%{makes: makes}) do
-    ["Any"] ++ makes
-  end
+  defp add_any_option(%{makes: makes}),
+    do: ["Any"] ++ makes
 
-  defp set_link(%{make: "Any"}) do
-    "/cars"
-  end
+  defp set_link(%{make: "Any"}),
+    do: "/cars"
 
-  defp set_link(%{make: make}) do
-    "/cars?make=#{make}"
-  end
+  defp set_link(%{make: make}),
+    do: "/cars?make=#{make}"
 
   defp set_active(%{makes: makes, filter: %{make: filter_make}}) do
     Enum.any?(makes, fn make -> make == filter_make end)
   end
 
-  defp set_active(_) do
-    false
-  end
+  defp set_active(_), do: false
 
-  defp active_menu_item(%{make: make, filter: %{make: filter_make}} = assigns) do
-    make == filter_make
-  end
+  defp active_menu_item(%{make: make, filter: %{make: filter_make}} = assigns),
+    do: make == filter_make
 
   defp active_menu_item(_), do: false
 

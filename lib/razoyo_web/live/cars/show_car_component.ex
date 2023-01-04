@@ -38,7 +38,6 @@ defmodule RazoyoWeb.CarsLive.ShowCarComponent do
     """
   end
 
-  defp set_price_format(%{car_info: %{"price" => price}}) do
-    number_to_currency(price)
-  end
+  defp set_price_format(%{car_info: %{"price" => price}}),
+    do: number_to_currency(price)
 end
