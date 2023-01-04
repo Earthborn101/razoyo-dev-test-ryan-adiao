@@ -6,7 +6,7 @@ defmodule Razoyo.API.Cars do
   @url "https://dev-test-frontend-werpwe2p3q-uc.a.run.app/cars"
 
   @doc """
-  Fetch list of cars
+  Fetch list of cars from https://dev-test-frontend-werpwe2p3q-uc.a.run.app/cars.
 
   ## Examples
 
@@ -41,7 +41,7 @@ defmodule Razoyo.API.Cars do
   end
 
   @doc """
-  Fetch car info
+  Fetch car info from https://dev-test-frontend-werpwe2p3q-uc.a.run.app/cars
 
   ## Examples
 
