@@ -7,5 +7,7 @@ To run this Phoenix project, follow the instructions below:
   * Clone this repository.
   * Install dependencies with `mix deps.get`. Don't need to run mix ecto.create. This project doesn't need a database.
   * Start Phoenix endpoint with `mix phx.server` to access.
+  * To access the project in your browser, visit [`localhost:4000/cars`] to open the project.
 
-Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
+## Loom Demo 
+* https://loom.com/share/af688f40fd7541b39461d55201138ff9
