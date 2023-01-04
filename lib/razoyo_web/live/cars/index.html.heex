@@ -1,0 +1,8 @@
+<%= if @live_action == :show do %>
+  <RazoyoWeb.CarsLive.ShowCarComponent.render car_info={@car_info} />
+<% end %>
+
+<div class="w-full">
+  <RazoyoWeb.CarsLive.FilterComponent.render filter={@filter} cars={@cars} makes={@makes} />
+  <RazoyoWeb.CarsLive.CarListComponent.render cars={@cars} />
+</div>
