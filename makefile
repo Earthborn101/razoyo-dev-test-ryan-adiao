@@ -1,4 +1,4 @@
-build: ##Build docker images
+build: ## Build docker image
 	sudo docker-compose build
 
 up: ## Run docker container

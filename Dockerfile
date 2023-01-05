@@ -1,7 +1,7 @@
 # ./Dockerfile
 
 # Extend from the official Elixir image.
-FROM elixir:latest
+FROM elixir:1.14.2
 
 # Create app directory and copy the Elixir projects into it.
 RUN mkdir /app
