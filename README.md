@@ -1,5 +1,5 @@
 # Razoyo Developer Front end test
-## By Ryan Christipher D. Adiao
+## By Ryan Christopher D. Adiao
 
 To run this Phoenix project in your local machine, follow the instructions below:
   * Update your local Elixir version to Elixir 1.14.2. 
