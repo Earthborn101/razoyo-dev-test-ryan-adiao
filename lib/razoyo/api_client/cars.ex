@@ -1,4 +1,4 @@
-defmodule Razoyo.API.Cars do
+defmodule Razoyo.ApiClient.Cars do
   @moduledoc """
   The cars api context.
   """
@@ -19,7 +19,7 @@ defmodule Razoyo.API.Cars do
   """
   def list_cars(filter) do
     {:ok, response} = HTTPoison.get(set_filter_url(@url, filter), [], [])
-    {:ok, body} = Poison.decode(response.body)
+    {:ok, body} = process_response_body(response)
     {_, token} = fetch_token(response.headers)
 
     %{
@@ -56,19 +56,13 @@ defmodule Razoyo.API.Cars do
         []
       )
 
-    {:ok, body} = Poison.decode(response.body)
+    {:ok, body} = process_response_body(response)
 
     body
   end
 
-  defp set_filter_url(url, %{make: make}) do
-    "#{url}?make=#{make}"
-  end
-
-  defp set_filter_url(url, _), do: url
-
-  defp fetch_token(headers) do
-    Enum.filter(headers, fn {header, _} -> header == "your-token" end)
-    |> List.first()
+  defp process_response_body(response) do
+    response.body
+    |> Poison.decode()
   end
 end

@@ -7,7 +7,7 @@
                              telemetry_metrics,telemetry_poller,gettext,jason,
                              plug_cowboy,httpoison,poison,number]},
               {description,"razoyo"},
-              {modules,['Elixir.Razoyo','Elixir.Razoyo.API.Cars',
+              {modules,['Elixir.Razoyo','Elixir.Razoyo.ApiClient.Cars',
                         'Elixir.Razoyo.Application','Elixir.RazoyoWeb',
                         'Elixir.RazoyoWeb.CarsLive.CarListComponent',
                         'Elixir.RazoyoWeb.CarsLive.FilterComponent',

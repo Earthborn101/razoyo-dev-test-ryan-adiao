@@ -3,7 +3,7 @@ defmodule RazoyoWeb.CarsLive.Index do
 
   import RazoyoWeb.CoreComponents
 
-  alias Razoyo.API.Cars
+  alias Razoyo.ApiClient.Cars
 
   def mount(_params, _, socket) do
     {:ok, socket}
