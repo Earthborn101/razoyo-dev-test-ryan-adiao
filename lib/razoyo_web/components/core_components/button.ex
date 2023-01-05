@@ -213,7 +213,7 @@ defmodule RazoyoWeb.CoreComponents.Button do
   defp get_color_classes(%{color: "secondary", variant: variant}) do
     case variant do
       "outline" ->
-        "text-orange-600 hover:bg-orange-50 border-orange-400 dark:border-orange-400 dark:hover:border-secondary-300 dark:hover:text-secondary-300 dark:hover:bg-transparent dark:text-secondary-400 hover:border-secondary-600 text-secondary-600 hover:text-secondary-700 active:bg-secondary-200 hover:bg-secondary-50 focus:border-secondary-700 focus:shadow-outline-secondary"
+      "text-orange-600 hover:bg-orange-50 border-orange-400 dark:border-orange-400 dark:hover:border-secondary-300 dark:hover:text-secondary-300 dark:hover:bg-transparent dark:text-secondary-400 hover:border-secondary-600 text-secondary-600 hover:text-secondary-700 active:bg-secondary-200 hover:bg-secondary-50 focus:border-secondary-700 focus:shadow-outline-secondary"
 
       "inverted" ->
         "text-orange-600 border-orange-400 dark:border-orange-400 dark:hover:border-secondary-700 dark:hover:text-white dark:hover:bg-secondary-700 dark:text-secondary-400 hover:border-secondary-600 text-secondary-600 hover:text-white active:bg-secondary-700 hover:bg-secondary-600 focus:border-secondary-700 focus:shadow-outline-secondary"

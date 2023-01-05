@@ -8,8 +8,6 @@ defmodule RazoyoWeb.CoreComponents.Navigation do
   """
   use Phoenix.Component
 
-  import RazoyoWeb.CoreComponents
-
   attr :navigate, :any, required: true
   slot :inner_block, required: true
 

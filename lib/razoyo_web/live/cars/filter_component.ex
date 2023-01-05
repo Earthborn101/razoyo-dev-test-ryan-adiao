@@ -60,7 +60,7 @@ defmodule RazoyoWeb.CarsLive.FilterComponent do
 
   defp set_active(_), do: false
 
-  defp active_menu_item(%{make: make, filter: %{make: filter_make}} = assigns),
+  defp active_menu_item(%{make: make, filter: %{make: filter_make}}),
     do: make == filter_make
 
   defp active_menu_item(_), do: false

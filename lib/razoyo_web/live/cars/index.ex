@@ -1,8 +1,6 @@
 defmodule RazoyoWeb.CarsLive.Index do
   use Phoenix.LiveView
 
-  import RazoyoWeb.CoreComponents
-
   alias Razoyo.ApiClient.Cars
 
   def mount(_params, _, socket) do

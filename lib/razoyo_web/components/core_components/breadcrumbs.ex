@@ -10,8 +10,9 @@ defmodule RazoyoWeb.CoreComponents.Breadcrumbs do
     ]}/>
   """
   use Phoenix.Component
+  
+  import RazoyoWeb.CoreComponents
   import RazoyoWeb.CoreComponents.Helpers
-  alias RazoyoWeb.CoreComponents, as: CC
 
   attr :links, :list
   attr :separator, :string, values: ["slash", "chevron"]
@@ -31,13 +32,13 @@ defmodule RazoyoWeb.CoreComponents.Breadcrumbs do
           <.separator type={@separator} />
         <% end %>
 
-        <Link.a
+        <.a
           link_type={link[:link_type] || "a"}
           to={link.to}
           class={get_breadcrumb_classes(@link_class)}
         >
           <%= link.label %>
-        </Link.a>
+        </.a>
       <% end %>
     </div>
     """

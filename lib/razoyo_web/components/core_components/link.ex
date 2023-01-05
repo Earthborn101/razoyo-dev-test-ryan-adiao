@@ -10,7 +10,6 @@ defmodule RazoyoWeb.CoreComponents.Link do
   """
   use Phoenix.Component
 
-  import RazoyoWeb.CoreComponents
   import RazoyoWeb.CoreComponents.Helpers
 
   attr :link_type, :string, default: "a"

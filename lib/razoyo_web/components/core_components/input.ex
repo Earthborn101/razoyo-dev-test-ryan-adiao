@@ -13,9 +13,8 @@ defmodule RazoyoWeb.CoreComponents.Input do
   """
   use Phoenix.Component
 
-  import RazoyoWeb.CoreComponents.Helpers
-
   alias Phoenix.HTML.Form
+  alias RazoyoWeb.CoreComponents, as: CC
 
   attr :id, :any
   attr :name, :any
